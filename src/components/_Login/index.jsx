@@ -4,6 +4,7 @@ import { Box } from "@mui/material";
 
 import LoginForm from "./LoginForm";
 import DoctorSignupSvg from "components/Reuseable/Svgs/DoctorSignupSvg";
+import Logo from "components/Reuseable/Logo";
 
 const DoctorLogin = () => {
   return (
@@ -19,6 +20,10 @@ const DoctorLogin = () => {
         "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
       }}
     >
+      <Box sx={{ position: "absolute", top: "1rem", left: "1rem" }}>
+        <Logo src="/assets/logos/favicon_medlivery.png" isLink={true} link="/" />
+      </Box>
+
       <Box
         sx={{
           justifySelf: "center",
