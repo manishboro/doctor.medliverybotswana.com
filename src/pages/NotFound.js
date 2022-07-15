@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import { NavLink } from "react-router-dom";
+
 import CustomButton from "../components/Reuseable/Button";
 
 export default function Error() {

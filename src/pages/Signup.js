@@ -1,5 +1,6 @@
-import DoctorSignup from "components/_Signup";
 import { Helmet } from "react-helmet";
+
+import DoctorSignup from "components/_Signup";
 
 const Signup = () => {
   return (

@@ -1,5 +1,6 @@
-import LoginForm from "components/_Login";
 import { Helmet } from "react-helmet";
+
+import LoginForm from "components/_Login";
 
 const Login = () => {
   return (
