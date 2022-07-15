@@ -8,7 +8,7 @@ export default function Error() {
         <h2 style={{ padding: "1rem" }}>We are sorry, but the page you requested was not found!</h2>
 
         <NavLink
-          to="/login"
+          to="/"
           style={{
             width: "max-content",
             textDecoration: "none",

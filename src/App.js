@@ -9,9 +9,8 @@ function App() {
   return (
     <ErrorBoundary>
       <Routes>
-        <Route path="/login" element={<Login />} exact />
+        <Route path="/" element={<Login />} exact />
         <Route path="/signup" element={<Signup />} exact />
-
         <Route path="*" element={<Error />} />
       </Routes>
     </ErrorBoundary>

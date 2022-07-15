@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+import { useTheme } from "@mui/material";
 import { Box } from "@mui/system";
 import { MdOutlineDoubleArrow } from "react-icons/md";
 
 import Spinner from "../Spinner";
-import { palette } from "../../../utilities/palette";
 
 export default function CustomButton({
   outlined,
@@ -20,8 +20,10 @@ export default function CustomButton({
   innerButtonStyles,
   ...otherProps
 }) {
+  const theme = useTheme()
+
   return (
-    <Button {...otherProps} outlined={outlined} disabled={disabled || loading}>
+    <Button  {...otherProps} bgcolor={theme.palette.custom.blue_2} outlined={outlined} disabled={disabled || loading}>
       {!loading ? (
         hrefInt ? (
           <Link
@@ -33,7 +35,7 @@ export default function CustomButton({
               alignItems: "center",
               justifyContent: "center",
               textDecoration: "none",
-              color: disabled ? "white" : outlined ? palette.blue_2 : "white",
+              color: disabled ? "white" : outlined ? theme.custom.palette.blue_2 : "white",
               position: "relative",
               padding: ".5rem 1rem",
               ...innerButtonStyles,
@@ -58,7 +60,7 @@ export default function CustomButton({
               alignItems: "center",
               justifyContent: "center",
               textDecoration: "none",
-              color: disabled ? "white" : outlined ? palette.blue_2 : "white",
+              color: disabled ? "white" : outlined ? theme.custom.palette.blue_2 : "white",
               position: "relative",
               padding: ".5rem 1rem",
               ...innerButtonStyles,
@@ -79,7 +81,7 @@ export default function CustomButton({
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              color: disabled ? "white" : outlined ? palette.blue_2 : "white",
+              color: disabled ? "white" : outlined ? theme.custom.palette.blue_2 : "white",
               position: "relative",
               padding: ".5rem 1rem",
               ...innerButtonStyles,
@@ -101,21 +103,21 @@ export default function CustomButton({
 }
 
 const Button = styled.button`
-  border: ${(props) => (props.disabled ? "none" : props.outlined ? `1px solid ${palette.blue_2}` : "none")};
+  border: ${(props) => (props.disabled ? "none" : props.outlined ? `1px solid ${props.bgcolor}` : "none")};
   outline: none;
   flex-shrink: 0;
   font-size: 1.6rem;
   font-weight: 500;
   border-radius: 5px;
   transition: 0.2s ease-out;
-  background-color: ${(props) => (props.disabled ? "#C5C5C5" : props.outlined ? "transparent" : palette.blue_2)};
+  background-color: ${(props) => (props.disabled ? "#C5C5C5" : props.outlined ? "transparent" : props.bgcolor)};
   cursor: pointer;
   height: 3.75rem;
   min-width: 14rem;
   position: relative;
 
   &:hover {
-    background-color: ${(props) => (props.disabled ? "#C5C5C5" : props.outlined ? "transparent" : palette.blue_2)};
+    background-color: ${(props) => (props.disabled ? "#C5C5C5" : props.outlined ? "transparent" : props.bgcolor)};
   }
 
   span {

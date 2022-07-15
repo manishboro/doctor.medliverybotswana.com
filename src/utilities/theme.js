@@ -3,14 +3,14 @@ import { createTheme } from "@mui/material/styles";
 // Create a theme instance.
 let theme = createTheme({
   typography: {
-    fontFamily: "Montserrat, Open Sans, Fjalla One",
+    fontFamily: "Poppins",
     htmlFontSize: 10,
     h1: { fontSize: "4.25rem" },
-    h2: { fontSize: "3rem" },
+    h2: { fontSize: "3.25rem" },
     h3: { fontSize: "2.25rem" },
     h6: { fontSize: "6.5rem" },
-    body1: { fontSize: "1.8rem" },
-    body2: { fontSize: "1.7rem" },
+    body1: { fontSize: "2rem" },
+    body2: { fontSize: "1.8rem" },
     subtitle1: { fontSize: "1.6rem" },
     subtitle2: { fontSize: "1.4rem" },
     subtitle3: { fontSize: "1.2rem" },
@@ -50,21 +50,10 @@ let theme = createTheme({
   },
   palette: {
     custom: {
-      main: "#fff",
-      secondary: "#EFEFEF",
-      light: "#00a3c8",
-      dark: "#050A30",
-      medium: "#10327a",
-      text: "#000C66",
-
-      light_blue: "#00a3c8",
-      medium_red: "#ff005a",
-
-      dark_grey: "#575757",
+      blue_1: "#0075FC",
+      blue_2: "#0078d4",
     },
   },
 });
-
-// theme = responsiveFontSizes(theme);
 
 export default theme;

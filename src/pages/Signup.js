@@ -1,9 +1,7 @@
-import React from 'react'
+import DoctorSignup from "components/_Signup";
 
 const Signup = () => {
-  return (
-    <div>Signup</div>
-  )
-}
+  return <DoctorSignup />;
+};
 
-export default Signup
+export default Signup;
