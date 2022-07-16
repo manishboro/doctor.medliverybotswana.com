@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 
 import DoctorSignup from "components/_Signup";
+import Layout from "components/Reuseable/Layout";
 
 const Signup = () => {
   return (
@@ -9,7 +10,9 @@ const Signup = () => {
         <title>Medlivery Doctor | Signup</title>
       </Helmet>
 
-      <DoctorSignup />
+      <Layout>
+        <DoctorSignup />
+      </Layout>
     </>
   );
 };

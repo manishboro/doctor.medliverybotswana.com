@@ -17,7 +17,7 @@ const DoctorLogin = () => {
         alignItems: "center",
         gap: "4rem",
         padding: "2rem",
-        "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
+        "@media (max-width: 1000px)": { gridTemplateColumns: "1fr" },
       }}
     >
       <Box sx={{ position: "absolute", top: "1rem", left: "1rem" }}>
@@ -27,7 +27,7 @@ const DoctorLogin = () => {
       <Box
         sx={{
           justifySelf: "center",
-          "@media (max-width: 960px)": { display: "none" },
+          "@media (max-width: 1000px)": { display: "none" },
         }}
       >
         <Box sx={{ typography: "h2", marginTop: "1rem" }}>
@@ -41,8 +41,7 @@ const DoctorLogin = () => {
         </Box>
 
         <Box sx={{ typography: "body1", marginTop: "1rem" }}>
-          <Box>Consult online, Give prescriptions, Manage records,</Box>
-          <Box>Get paid directly and much more</Box>
+          <Box>Consult online, Give prescriptions, Manage records, Get paid directly and much more</Box>
         </Box>
 
         <Box style={{ marginTop: "4rem" }}>

@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 
 import LoginForm from "components/_Login";
+import Layout from "components/Reuseable/Layout";
 
 const Login = () => {
   return (
@@ -9,7 +10,9 @@ const Login = () => {
         <title>Medlivery Doctor | Login</title>
       </Helmet>
 
-      <LoginForm />
+      <Layout>
+        <LoginForm />
+      </Layout>
     </>
   );
 };
